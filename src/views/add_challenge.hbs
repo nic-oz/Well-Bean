@@ -1,5 +1,34 @@
 <section>
+
   <header>
     <h1>Create a new challenge</h1>
   </header>
+
+  <form name="addChallenge" action="/add-challenge" method="POST">
+    <label for="title">Challenge Title</label>
+    <input name="title" id="title" type="text" placeholder="Please type a title" value="{{titleValue}}">
+    <label for="categoryId">Category</label>
+    <select name="categoryId" id="categoryId">
+      <option value="" disabled {{#unless categoryId}}selected{{/unless}}>Please select an option from below</option>
+      <option value="1" {{#equals categoryId 1}}selected{{/equals}}>Fitness</option>
+      <option value="2" {{#equals categoryId 2}}selected{{/equals}}>Nourishment</option>
+      <option value="3" {{#equals categoryId 3}}selected{{/equals}}>Home</option>
+      <option value="4" {{#equals categoryId 4}}selected{{/equals}}>Family</option>
+      <option value="5" {{#equals categoryId 5}}selected{{/equals}}>Learning</option>
+      <option value="6" {{#equals categoryId 6}}selected{{/equals}}>Mindfulness</option>
+      <option value="7" {{#equals categoryId 7}}selected{{/equals}}>Social</option>
+      <option value="8" {{#equals categoryId 8}}selected{{/equals}}>Romance</option>
+    </select>
+    {{#if errorCategory}}
+    <span>{{errorCategory}}</span>
+    {{/if}}
+    <label for="description">Description</label>
+    <textarea name="description" id="description" cols="30" rows="10" placeholder="Please provide details of your challenge here">{{descriptionValue}}</textarea>
+    {{#if errorText}}
+    <span>{{errorText}}</span>
+    {{/if}}
+    <input type="hidden" name="userId" value="1">
+    <input type="submit" id="submit" value="Submit"> {{!-- please remember to avoid using form name in the input submit! --}}
+  </form>
+
 </section>

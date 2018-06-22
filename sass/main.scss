@@ -1,0 +1,55 @@
+@import 'reset';
+@import 'styleguide';
+@import 'mixins';
+
+body {
+  @include flex-container(column, center, center);
+  background-color: $white;
+  font-family: $body-font;
+  height: 100vh;
+  width: 100vw;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+main {
+  @include flex-container(column, space-around, center);
+  height: 520 / 570 * 100%;
+  width: 300 / 320 * 100%;
+}
+
+@import 'home';
+
+footer {
+  height: 50 / 570 * 100%;
+  width: 100%;
+}
+
+nav {
+  @include flex-container(row, space-around, center);
+  height: 100%;
+  width: 100%;
+  background-color: $primary-colour;
+
+  a {
+    @include flex-container(column, space-around, center);
+    height: 100%;
+    width: 60 / 320 * 100%;
+    text-decoration: none;
+    color: $black;
+
+    img {
+      height: 25 / 50 * 100%;
+      width: 25 / 60 * 100%;
+    }
+
+    span {
+      height: 10 / 50 * 100%;
+      width: 100%;
+      font-size: 10 / 570 * 100vh;
+      text-align: center;
+    }
+  }
+}
+
+

@@ -1,0 +1,23 @@
+<section class="section__login">
+  <h1 class="login__title">WELL-BEAN</h1>
+  <h3 class="login__title--desc">Your journey starts today</h3>
+  <div class="login__desc">
+  <p>Anonymous, feel confident expressing yourself to others. </p>
+  <p>Join a positive community determined to your <span style="color:white;font-size:90%"> WELL-BEAN </span> </p>
+  </div>
+  <article class="login__form--container">
+    <form class="login__form" action="/login" method="POST">
+      <fieldset>
+        <label for="user">Username/Email</label>
+        <input aria-label="username or email field" type="text" name="inputUser" id="user" placeholder="Username or Email">
+        <label for="password">Password</label>
+        <input aria-label="password field" type="password" name="inputPassword" id="password" placeholder="Your Password">
+      </fieldset>
+        {{#if error}}
+        <div class="login__error">{{error}}</div>
+        {{/if}}
+        <button class="login__form--button">Login</button>
+    </form>
+    <a href="/signup">New user? Register here</a>
+  </article>
+</section>

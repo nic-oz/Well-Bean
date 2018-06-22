@@ -1,0 +1,25 @@
+<section class="section__signup">
+  <h1 class="signup__title">Sign Up</h1>
+  <div class="signup__desc">
+  <p>We take our promise of anonymity seriously. We will never share your information with others. </p>
+  </div>
+  <article class="signup__form--container">
+    <form class="signup__form" action="/signup" method="POST">
+      <fieldset>
+        <label for="username">Username</label>
+        <input aria-label="username field"  type="text" name="username" id="username" value="{{usernameValue}}" placeholder="choose a username">
+        <label for="email">Email</label>
+        <input aria-label="email field" type="email" name="email" id="email" value="{{emailValue}}" placeholder="add your email">
+        <label for="password">Password</label>
+        <input aria-label="password field" type="password" name="password" id="password" placeholder="enter a password">
+        <label for="confirm-password">Confirm Password</label>
+        <input aria-label="confirm your password" type="password" name="confirmPassword" id="confirm-password" placeholder="confirm your password">
+
+      </fieldset>
+      {{#if error}}
+        <div class="signup__error">{{error}}</div>
+      {{/if}}
+        <button class="signup__form--button">Sign Up</button>
+    </form>
+  </article>
+</section>

@@ -1,0 +1,16 @@
+<section>
+
+  <header>
+    <h1>Add your own message</h1>
+  </header>
+
+  <form name="addMessage" action="/add-message" method="POST">
+    <h4></h4>
+    <label for="message">Message</label>
+    <textarea name="message" id="message" cols="30" rows="10" placeholder="Please type your message here"></textarea> {{#if error}}
+    <span>{{error}}</span>
+    {{/if}}
+    <input type="submit" id="submit" value="Submit"> {{!-- please remember to avoid using form name in the input submit! --}}
+  </form>
+
+</section>
