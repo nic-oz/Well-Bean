@@ -10,7 +10,7 @@
   <form class="add-challenge__form" name="addChallenge" action="/add-challenge" method="POST">
     <input name="title" id="title" type="text" placeholder="Please type a title" value="{{titleValue}}">
     <select name="categoryId" id="categoryId">
-      <option value="" disabled {{#unless categoryId}}selected{{/unless}}>Please select an option from below</option>
+      <option value="" disabled {{#unless categoryId}}selected{{/unless}}>Please select an option</option>
       <option value="1" {{#equals categoryId 1}}selected{{/equals}}>Fitness</option>
       <option value="2" {{#equals categoryId 2}}selected{{/equals}}>Nourishment</option>
       <option value="3" {{#equals categoryId 3}}selected{{/equals}}>Home</option>
@@ -23,7 +23,7 @@
     {{#if errorCategory}}
     <span>{{errorCategory}}</span>
     {{/if}}
-    <textarea name="description" id="description" cols="30" rows="10" placeholder="Please provide details of your challenge here">{{descriptionValue}}</textarea> {{#if errorText}}
+    <textarea name="description" id="description" placeholder="Please provide details of your challenge here">{{descriptionValue}}</textarea> {{#if errorText}}
     <span>{{errorText}}</span>
     {{/if}}
     <input type="hidden" name="userId" value="1">

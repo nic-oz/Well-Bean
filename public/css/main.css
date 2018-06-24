@@ -691,6 +691,29 @@ main {
   text-decoration: none;
 }
 
+.add-challenge__form input {
+  width: 80%;
+  padding: 5%;
+  font-size: 0.8rem;
+  color: #2d3039;
+}
+
+.add-challenge__form textarea {
+  font-size: 0.8rem;
+  padding: 5%;
+  font-family: Nunito;
+  height: 40%;
+  width: 80%;
+}
+
+.add-challenge__form select {
+  width: 90%;
+  padding: 5%;
+  font-size: 0.8rem;
+  color: #2d3039;
+  background: white;
+}
+
 footer {
   height: 8.77193%;
   width: 100%;
