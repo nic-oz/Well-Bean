@@ -237,34 +237,42 @@ main {
 
 .fitness {
   border-color: #26bbec;
+  color: #26bbec;
 }
 
 .social {
   border-color: #fbad4a;
+  color: #fbad4a;
 }
 
 .family {
   border-color: #cc3333;
+  color: #cc3333;
 }
 
 .mindfulness {
   border-color: #873a87;
+  color: #873a87;
 }
 
 .nourishment {
   border-color: #feda38;
+  color: #feda38;
 }
 
 .home {
   border-color: #999999;
+  color: #999999;
 }
 
 .romance {
   border-color: #f97da3;
+  color: #f97da3;
 }
 
 .learning {
   border-color: #66cccc;
+  color: #66cccc;
 }
 
 .active__cat {
@@ -286,6 +294,14 @@ main {
 .active__img {
   width: 50%;
   height: 50%;
+}
+
+.active__title {
+  color: #2d3039;
+}
+
+.active__desc {
+  color: #2d3039;
 }
 
 .active__btns {
@@ -389,6 +405,51 @@ main {
 
 .modal__btn:hover {
   color: #000;
+}
+
+.progress__user {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+  font-family: Londrina Solid;
+}
+
+.progress__user img {
+  border-radius: 50%;
+  padding: 0 1rem;
+}
+
+.progress__challenges {
+  height: 70%;
+  width: 100%;
+}
+
+.progress__challenges li {
+  border-width: 0.2rem;
+  border-style: solid;
+  padding: 3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progress__challenge h5 {
+  font-family: Londrina Solid;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 2%;
+}
+
+.progress__challenge p {
+  color: #2d3039;
+}
+
+.progress__challenges h4 {
+  color: #2d3039;
+  font-weight: 700;
 }
 
 footer {

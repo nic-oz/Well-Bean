@@ -1,20 +1,19 @@
 <section class="progress__user">
-  <img clas="progress__user--pic" src="https://api.adorable.io/avatars/48/{{username}}" alt="user icon {{username}}" height="60px"
-    width="60px">
-  <h2 class="progress__user--name">Hello {{username}}</h2>
+  <img src="https://api.adorable.io/avatars/48/{{username}}" alt="user icon {{username}}">
+  <h2>Hello {{username}}</h2>
 </section>
 
 <p>Please find a list of all your challenges below:</p>
 
 <section class="progress__challenges">
-  <ul class="progress__list">
+  <ul>
     {{#each userChallenges}}
-    <li>
+    <li class="{{lowercase category}}">
       <div class="progress__challenge">
-        <h3>{{this.category}}</h3>
+        <h5 class="{{lowercase category}}">{{category}}</h5>
         <p>{{this.title}}</p>
-        <p>{{this.total}}</p>
       </div>
+      <h4>{{this.total}}</h4>
     </li>
     {{/each}}
   </ul>
