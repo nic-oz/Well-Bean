@@ -181,6 +181,14 @@ h6 {
   text-transform: uppercase;
 }
 
+.bold {
+  font-weight: 700;
+}
+
+.italic {
+  font-style: italic;
+}
+
 main {
   display: -webkit-box;
   display: -moz-box;
@@ -434,6 +442,8 @@ main {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  border-radius: 10px;
+  margin-bottom: 4%;
 }
 
 .progress__challenge h5 {
@@ -450,6 +460,74 @@ main {
 .progress__challenges h4 {
   color: #2d3039;
   font-weight: 700;
+}
+
+.messages {
+  height: 80%;
+  width: 100%;
+}
+
+.messages h2 {
+  font-family: Londrina Solid;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.message {
+  border-width: 0.2rem;
+  border-style: solid;
+  padding: 5% 5% 2% 5%;
+  align-items: center;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  margin: 4% 0;
+}
+
+.message h4 {
+  padding-bottom: 3%;
+}
+
+.message__author {
+  display: flex;
+  flex-direction: row;
+  font-size: 60%;
+  justify-content: flex-end;
+}
+
+.message__author-name {
+  font-weight: 700;
+  padding-right: 2%;
+  font-size: 110%;
+}
+
+.message__author-time {
+  font-style: italic;
+}
+
+.messsage__add {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.message__add a {
+  text-decoration: none;
+  font-size: 3rem;
+  color: #2d3039;
+}
+
+.message__btn {
+  background-color: #74dfb5;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: transparent;
+}
+
+.message__add h2 {
+  font-size: 4em;
 }
 
 footer {
