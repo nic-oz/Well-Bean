@@ -530,6 +530,63 @@ main {
   font-size: 4em;
 }
 
+.add-message {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.add-message__header {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+}
+
+.add-message__header h2 {
+  font-family: Londrina Solid;
+  text-align: center;
+  margin-left: 2%;
+}
+
+.add-message__form {
+  height: 75%;
+  padding: 8% 6%;
+  background: #74dfb5;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.add-message__form label {
+  padding: 5%;
+  font-size: 1rem;
+}
+
+.add-message__form textarea {
+  font-family: Nunito;
+  font-size: 1rem;
+  height: 50%;
+  width: 90%;
+}
+
+.add-message__form input {
+  border: 2px solid #f5f6fa;
+  color: #f5f6fa;
+  font-size: 1.2rem;
+  width: 90%;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  background: transparent;
+  padding: 5%;
+  letter-spacing: 2px;
+  margin: 5%;
+}
+
 footer {
   height: 8.77193%;
   width: 100%;
