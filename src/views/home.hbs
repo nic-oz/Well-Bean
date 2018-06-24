@@ -7,7 +7,7 @@
   <div class="active__cat {{lowercase category}}">
     <img class="active__img" src="/img/{{lowercase category }}.svg" alt="icon for {{ category }}" height="60px" width="60px">
   </div>
-  <h3 class="active__title">{{ title }}</h3>
+  <h4 class="active__title">{{ title }}</h4>
 
 
   <div class="active__btns">
@@ -20,12 +20,16 @@
     </div>
   </div>
 
+  <div class="active__desc">
+    <h5>Chellenge completed?</h5>
+  </div>
+
   {{> modals }}
 
 </section>
 
-  {{else}}
+{{else}}
 <section class="not-active">
   <p class="not-active__text">no active</p>
 </section>
-  {{/if}}
+{{/if}}
