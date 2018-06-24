@@ -462,6 +462,7 @@ main {
   font-weight: 700;
 }
 
+.challenges,
 .messages {
   height: 80%;
   width: 100%;
@@ -473,6 +474,7 @@ main {
   margin-bottom: 0.5rem;
 }
 
+.challenge,
 .message {
   border-width: 0.2rem;
   border-style: solid;
@@ -483,24 +485,31 @@ main {
   margin: 4% 0;
 }
 
+.challenge p,
 .message p {
   padding-bottom: 3%;
+  color: #2d3039;
 }
 
-.message__author {
+.message__author,
+.challenge__author {
   display: flex;
   flex-direction: row;
   font-size: 60%;
   justify-content: flex-end;
 }
 
-.message__author-name {
+.message__author-name,
+.challenge__author-name {
+  color: #2d3039;
   font-weight: 700;
   padding-right: 2%;
   font-size: 110%;
 }
 
-.message__author-time {
+.message__author-time,
+.challenge__author-time {
+  color: #2d3039;
   font-style: italic;
 }
 
@@ -517,7 +526,8 @@ main {
   color: #2d3039;
 }
 
-.message__btn {
+.message__btn,
+.challenge__btn {
   background-color: #74dfb5;
   border-radius: 50%;
   width: 3rem;
@@ -526,29 +536,42 @@ main {
   border: transparent;
 }
 
+.challenge__btn h2,
 .message__add h2 {
   font-size: 4em;
 }
 
+.add-challenge,
 .add-message {
   display: flex;
   height: 100%;
   flex-direction: column;
   justify-content: space-evenly;
+  width: 100%;
 }
 
+.add-challenge__header,
 .add-message__header {
   flex-direction: row;
   display: flex;
   align-items: center;
 }
 
+.add-challenge__header h2,
 .add-message__header h2 {
   font-family: Londrina Solid;
   text-align: center;
   margin-left: 2%;
 }
 
+@media only screen and (max-width: 400px) {
+  .add-challenge__header h2,
+  .add-message__header h2 {
+    margin-left: 0;
+  }
+}
+
+.add-challenge__form,
 .add-message__form {
   height: 75%;
   padding: 8% 6%;
@@ -573,7 +596,8 @@ main {
   width: 90%;
 }
 
-.add-message__form input {
+.add-challenge__form input[type='submit'],
+.add-message__form input[type='submit'] {
   border: 2px solid #f5f6fa;
   color: #f5f6fa;
   font-size: 1.2rem;
@@ -646,6 +670,25 @@ main {
   .categories h4 {
     font-size: 80%;
   }
+}
+
+.challenges h2 {
+  font-family: Londrina Solid;
+  text-align: center;
+  margin-bottom: 1%;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.challenges hr {
+  width: 40%;
+  border-width: 3px;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.challenges a {
+  text-decoration: none;
 }
 
 footer {

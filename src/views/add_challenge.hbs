@@ -1,13 +1,14 @@
-<section>
+<section class="add-challenge">
 
-  <header>
-    <h1>Create a new challenge</h1>
+  <header class="add-challenge__header">
+    <a href="/challenges">
+      <img src="/img/back.svg">
+    </a>
+    <h2>Create a new challenge</h2>
   </header>
 
-  <form name="addChallenge" action="/add-challenge" method="POST">
-    <label for="title">Challenge Title</label>
+  <form class="add-challenge__form" name="addChallenge" action="/add-challenge" method="POST">
     <input name="title" id="title" type="text" placeholder="Please type a title" value="{{titleValue}}">
-    <label for="categoryId">Category</label>
     <select name="categoryId" id="categoryId">
       <option value="" disabled {{#unless categoryId}}selected{{/unless}}>Please select an option from below</option>
       <option value="1" {{#equals categoryId 1}}selected{{/equals}}>Fitness</option>
@@ -22,9 +23,7 @@
     {{#if errorCategory}}
     <span>{{errorCategory}}</span>
     {{/if}}
-    <label for="description">Description</label>
-    <textarea name="description" id="description" cols="30" rows="10" placeholder="Please provide details of your challenge here">{{descriptionValue}}</textarea>
-    {{#if errorText}}
+    <textarea name="description" id="description" cols="30" rows="10" placeholder="Please provide details of your challenge here">{{descriptionValue}}</textarea> {{#if errorText}}
     <span>{{errorText}}</span>
     {{/if}}
     <input type="hidden" name="userId" value="1">

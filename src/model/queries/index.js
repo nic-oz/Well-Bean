@@ -1,4 +1,5 @@
 const getAllChallenges = require('./get_all_challenges');
+const getChallenges = require('./get_challenges');
 const getChallenge = require('./get_challenge');
 const getMessages = require('./get_messages');
 const getActiveChallenge = require('./get_active_challenge');
@@ -15,6 +16,7 @@ const updateUserChallenge = require('./update_user_challenge');
 
 module.exports = {
   getAllChallenges,
+  getChallenges,
   getActiveChallenge,
   getChallenge,
   getMessages,
