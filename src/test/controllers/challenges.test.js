@@ -9,7 +9,7 @@ test('Test GET challenges list view route', (t) => {
     .then((dbRes) => {
       t.ok(dbRes, 'database built');
       request(router)
-        .get('/challenges')
+        .get('/challenges/fitness')
         .expect(200)
         .expect('Content-Type', /html/)
         .end((err, res) => {

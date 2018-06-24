@@ -22,7 +22,7 @@ function createLoginCookie(server, loginDetails, callback) {
     .expect(302)
     .end((error, response) => {
       if (error) {
-        throw (error);
+        throw error;
       }
       const loginCookie = response.headers['set-cookie'];
       callback(loginCookie);
@@ -32,18 +32,22 @@ function createLoginCookie(server, loginDetails, callback) {
 // Using auxiliary function in test cases.
 
 test('Test home route with loggedIn true', (t) => {
-  createLoginCookie('/login', {
-    inputUser: 'tinky@winky.com',
-    inputPassword: 'password123',
-  }, (cookie) => {
-    request(router)
-      .get('/')
-      .set('cookie', cookie)
-      .expect(200)
-      .end((err, res) => {
-        t.error(err);
-        t.ok(res.text.includes('Welcome', 'access to homepage'));
-        t.end();
-      });
-  });
+  createLoginCookie(
+    '/login',
+    {
+      inputUser: 'tinky@winky.com',
+      inputPassword: 'password123',
+    },
+    (cookie) => {
+      request(router)
+        .get('/')
+        .set('cookie', cookie)
+        .expect(200)
+        .end((err, res) => {
+          t.error(err);
+          t.ok(res.text.includes('Welcome', 'access to homepage'));
+          t.end();
+        });
+    },
+  );
 });

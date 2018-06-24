@@ -4,6 +4,7 @@ const getMessages = require('./get_messages');
 const getActiveChallenge = require('./get_active_challenge');
 const getUser = require('./get_user');
 const getUserChallenges = require('./get_user_challenges');
+const getCategories = require('./get_categories');
 
 const postChallenge = require('./post_challenge');
 const postMessage = require('./post_message');
@@ -17,6 +18,7 @@ module.exports = {
   getActiveChallenge,
   getChallenge,
   getMessages,
+  getCategories,
   getUser,
   getUserChallenges,
   postChallenge,

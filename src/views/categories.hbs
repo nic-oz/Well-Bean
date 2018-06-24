@@ -1,0 +1,13 @@
+<section class="categories">
+  <h2>CHOOSE A CATEGORY</h2>
+  <ul>
+    {{#each categories}}
+    <a href="challenges/{{lowercase this.category}}">
+      <li class="category {{lowercase this.category}}">
+        <img src="/img/{{lowercase this.category}}.svg" alt="icon for {{this.category}}">
+        <h4 class="{{lowercase this.category}}">{{this.category}}</h4>
+      </li>
+    </a>
+    {{/each}}
+  </ul>
+</section>
