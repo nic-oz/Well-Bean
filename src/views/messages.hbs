@@ -1,14 +1,28 @@
-<section>
-  <ul>
+<section class="messages">
+
+  <h2>SHARE THE GOOD VIBES</h2>
+
+  <ul class="messages__list">
     {{#each allMessages}}
-    <li>
-      <div>
-        <p>{{this.body}}</p>
-        <img src="http://sigil.cupcake.io/{{this.username}}" alt="user icon {{this.username}}" height="60px" width="60px">
-        <p>{{this.username}}</p>
-        <p>{{this.time}}</p>
+    <li class="message">
+      <p>{{this.body}}</p>
+      <div class="message__author">
+        <p class="message__author-name">
+          {{this.username}}
+        </p>
+        <p class="message__author-time">
+          {{this.time}}
+        </p>
       </div>
     </li>
     {{/each}}
   </ul>
+</section>
+
+<section class="message__add">
+  <a href="/add-message">
+    <button class="message__btn">
+      <h2>+</h2>
+    </button>
+  </a>
 </section>

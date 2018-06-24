@@ -1,17 +1,32 @@
-<section>
+<section class="challenges">
+
+  {{#each challenges}} {{#if @first}}
+  <h2>{{this.category}}</h2>
+  <hr class="{{lowercase this.category}}"> {{/if}}{{/each}}
+
   <ul>
     {{#each challenges}}
-    <li>
-      <a href="/challenge/{{this.id}}">
-        <div>
-          <h1>{{this.title}}</h1>
-          <img src="/img/{{lowercase this.category}}.svg" alt="icon for {{this.category}}" height="60px" width="60px">
+    <a href="/challenge/{{lowercase this.id}}">
+      <li class="challenge {{lowercase this.category}}">
+        <p>{{this.title}}</p>
+        <div class="challenge__author">
+          <p class="challenge__author-name">
+            {{this.username}}
+          </p>
+          <p class="challenge__author-time">
+            {{this.time}}
+          </p>
         </div>
-      </a>
-    </li>
+      </li>
+    </a>
+
     {{/each}}
   </ul>
 </section>
 <section>
-  <a href="/add-challenge">Add a new challenge</a>
+  <a href="/add-challenge">
+    <button class="challenge__btn">
+      <h2>+</h2>
+    </button>
+  </a>
 </section>

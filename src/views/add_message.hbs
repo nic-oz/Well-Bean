@@ -1,0 +1,18 @@
+<section class="add-message">
+
+  <header class="add-message__header">
+    <a href="/messages">
+      <img src="/img/back.svg">
+    </a>
+    <h2>Add your own message</h2>
+  </header>
+
+  <form class="add-message__form" name="addMessage" action="/add-message" method="POST">
+    <label for="message">Create your own positive message to motivate and inspire other users.</label>
+    <textarea name="message" id="message" placeholder="Please type your message here"></textarea> {{#if error}}
+    <span>{{error}}</span>
+    {{/if}}
+    <input type="submit" id="submit" value="Submit"> {{!-- please remember to avoid using form name in the input submit! --}}
+  </form>
+
+</section>
