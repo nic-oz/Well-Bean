@@ -6,18 +6,18 @@
 
   <ul>
     {{#each challenges}}
-    <a href="/challenge/{{lowercase this.id}}"></a>
-    <li class="challenge {{lowercase this.category}}">
-      <p>{{this.title}}</p>
-      <div class="challenge__author">
-        <p class="challenge__author-name">
-          {{this.username}}
-        </p>
-        <p class="challenge__author-time">
-          {{this.time}}
-        </p>
-      </div>
-    </li>
+    <a href="/challenge/{{lowercase this.id}}">
+      <li class="challenge {{lowercase this.category}}">
+        <p>{{this.title}}</p>
+        <div class="challenge__author">
+          <p class="challenge__author-name">
+            {{this.username}}
+          </p>
+          <p class="challenge__author-time">
+            {{this.time}}
+          </p>
+        </div>
+      </li>
     </a>
 
     {{/each}}

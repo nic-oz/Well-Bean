@@ -714,6 +714,65 @@ main {
   background: white;
 }
 
+.challenge__details {
+  display: block;
+  width: 95%;
+  margin: auto;
+  height: 90%;
+  background: #f5f6fa;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  text-align: center;
+  overflow-y: scroll;
+}
+
+.challenge__details a {
+  float: left;
+}
+
+.challenge__container {
+  border-radius: 50%;
+  width: 30%;
+  border-width: 0.3rem;
+  border-style: solid;
+  text-align: center;
+  padding: 6% 1%;
+  margin: 5% auto;
+}
+
+.challenge__container img {
+  width: 50%;
+  height: 50%;
+}
+
+.challenge__desc {
+  text-align: left;
+  padding: 10%;
+}
+
+.challenge__details h2 {
+  margin: 10% auto 0 auto;
+}
+
+.challenge__accept {
+  margin-bottom: 10%;
+}
+
+.challenge__accept input[type='submit'] {
+  font-size: 3rem;
+  color: #2d3039;
+  background-color: #74dfb5;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: transparent;
+}
+
+.challenge__info {
+  font-size: 80%;
+}
+
 footer {
   height: 8.77193%;
   width: 100%;

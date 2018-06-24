@@ -1,19 +1,24 @@
-<section>
-  <article>
-    <a href="/challenges/{{category}}">Back</a>
-    <header>
-      <img src="/img/{{lowercase category}}.svg" alt="icon for {{category}}" height="60px" width="60px">
-      <h2>{{title}}</h2>
-    </header>
-    <main>
-      <p>{{description}}</p>
-      <form action="/user-challenge/{{id}}" method="POST">
-        <input type="submit" value="Select Challenge">
-      </form>
-    </main>
-    <footer>
-      <p>This challenge was added by
-        <img src="https://api.adorable.io/avatars/48/{{username}}" height="50px" width="50px">{{username}} on {{added}}.</p>
-    </footer>
+<section class="challenge__details">
+
+  <a href="/challenges/{{category}}">
+    <img src="/img/back.svg">
+  </a>
+  <article class="challenge__article"></article>
+  <div class="challenge__container {{lowercase category}}">
+    <img class="{{lowercase category}}" src="/img/{{lowercase category}}.svg " alt="icon for {{category}} ">
+  </div>
+
+  <h2>{{title}}</h2>
+
+  <p class="challenge__desc ">{{description}}</p>
+
+  <form class="challenge__accept" action="/user-challenge/{{id}} " method="POST ">
+    <input type="submit" value="&#10003">
+  </form>
+
+  <section class="challenge__info">
+    <p>This challenge was added by {{username}} on {{time}}.</p>
+  </section>
+
   </article>
 </section>
